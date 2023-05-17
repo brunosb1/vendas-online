@@ -14,7 +14,11 @@ export class UserService {
   async createUser(createUserDTO: createUserDTO): Promise<UserEntity> {
     return {
       ...createUserDTO,
+      typeUser: 1,
+      password: undefined,
       id: 1,
+      createdAt: new Date(),
+      updatedAt: new Date(),
     };
   }
 }
